@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Reviews = () => {
+
+    const [review, setReview] = useState('')
+    useEffect(() => {console.log(review)}, [review])
+
+    // const [newReview, setNewReview] = useState()
+    // const submitReview = {setNewReview}
 
     return (
         <div>
             <form className="reviews">
-                <input type="text" className="reviewBox"/>
+                <input type="text" value={review} onChange={e => setReview(e.target.value)} className="reviewBox"/>
                 <button>Submit</button>
             </form>
             {/* Have this appear after hitting submit */}
