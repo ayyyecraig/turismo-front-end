@@ -11,7 +11,7 @@ const Reviews = () => {
     return (
         <div>
             <form className="reviews">
-                <input type="text" value={review} onChange={e => setReview(e.target.value)} className="reviewBox"/>
+                <textarea type="text" value={review} onChange={e => setReview(e.target.value)} placeholder="Write a review" className="reviewBox"/>
                 <button>Submit</button>
             </form>
             {/* Have this appear after hitting submit */}
