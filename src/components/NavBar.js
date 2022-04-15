@@ -5,11 +5,11 @@ const Nav = () => {
     return (
         <nav className="navbar">
             <div>
-                <Link to='/'>Home</Link>
-                <Link to='/login'>Log In</Link>
-                <Link to='/register'>Register</Link>
-                <Link to='/viewcars'>Garage</Link>
-                <Link to='/viewparts'>View Parts</Link>
+                <Link to='/' className="links">Home</Link>
+                <Link to='/login' className="links">Log In</Link>
+                <Link to='/register' className="links">Register</Link>
+                <Link to='/viewcars' className="links">Garage</Link>
+                <Link to='/viewparts' className="links">View Parts</Link>
             </div>
         </nav>
     )

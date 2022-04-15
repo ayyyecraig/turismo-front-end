@@ -4,8 +4,8 @@ const Reviews = () => {
 
     return (
         <div>
-            <form>
-                <input type="text" />
+            <form className="reviews">
+                <input type="text" className="reviewBox"/>
                 <button>Submit</button>
             </form>
         </div>
