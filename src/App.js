@@ -7,6 +7,7 @@ import LogIn from './components/LogIn'
 import Register from './components/Register'
 import ViewCars from './components/ViewCars'
 import ViewParts from './components/ViewParts'
+import Reviews from './components/Reviews'
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
                     <Route path="register" element={ <Register /> } />
                     <Route path="viewcars" element={ <ViewCars /> } />
                     <Route path="viewparts" element={ <ViewParts /> } />
+                    <Route path="reviews" element={ <Reviews /> } />
                 </Routes>
             </main>
         </div>
