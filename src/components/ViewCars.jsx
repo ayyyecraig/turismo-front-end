@@ -18,6 +18,10 @@ const ViewCars = () => {
                 <li>Weight:</li>
                 <li>Price:</li>
             </ul>
+            <h3>Modifications:</h3>
+            <ul>
+                <li>Example</li>
+            </ul>
         </div>
     )
 
