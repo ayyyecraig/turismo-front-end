@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Reviews from './Reviews'
 
 const ViewParts = () => {
+
+    const [displayReview, setDisplayReview] = useState(false)
+
+    const toggleReviews = () => {
+        setDisplayReview(!displayReview)
+    }
 
     return (
         <div>
@@ -15,6 +22,11 @@ const ViewParts = () => {
                 <li>Effect on Horsepower:</li>
                 <li>Price:</li>
             </ul>
+            <button onClick={toggleReviews}>{displayReview === false ? "Leave A Review" : "Hide Review" }</button>
+            {/* Maybe have this appear at button click maybe not? */}
+            <div>
+                {displayReview ? <Reviews /> : null}
+            </div>
         </div>
     )
 
