@@ -1,70 +1,56 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Formula2
+[Kat Imperial](https://github.com/katimperial) [Linkedin](https://www.linkedin.com/in/kat-imperial-093b168b/)
 
-## Available Scripts
+[Sam Kibathi](https://github.com/kibathi218) [Linkedin](http://linkedin.com/in/samuel-kibathi)
 
-In the project directory, you can run:
+[Dylan Marvel](https://github.com/marveldylan) [Linkedin](https://www.linkedin.com/in/dylan-marvel/)
 
-### `npm start`
+[Adelaide Craig](https://github.com/ayyyecraig) [Linkedin](https://www.linkedin.com/in/adelaide-craig-00066b1a9/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+![Grand Turismo](https://twistedvoxel.com/wp-content/uploads/2019/04/gran-turismo-sport-update-1-38.jpg)
+***
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Discription
+Login to customize and display your car collection. Look thru our garage of specs and parts, check out reviews on parts to enhance your car as you want! Leave reviews for parts that didnt serve you justice in Italy! 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Formula 1 drivers or car connoisseur with bottomless pockets.. Create and sign in to view a virtual garage of your collection of cars!
+- Look at our list of Luxury performance vehicles!  
+- View Sick mods and specs and add them to your cars!
+- Hated or loved a certain modification ? Give it a review ! Let your fellow drivers know what's up! 
+- Feel embarassed by the drunken review you left on an inanimate object? Dont worry ! You can delete that or update to a more professional classy response !
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Getting Started
+Sam and Dylan hitting the back end starting strong with migrations, databases, and seeding. Kat and Addie will hit the front, with Kat leading the charge of structuring our apps files, navigation bar, and components, with Addie coming behind inserting boilerplates, page constructions etc. Once the basic structure of our application has been built out; the team will reconvene on to focus on axios calls, and CRUDS as priority #1 taken on mostly by Front ends pit crew. Once CRUD has hit a certain completion percentage, and models/ routes have taken full effect. Authenticating users will be the next priority to this Formula 1, Gran Turismo inspired application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Feature 
+***
+- Log In to see your Garage
+- Review
+- View Cars
+- View/ add parts to sup up vehicles
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Technologies 
+* React 
+* Sequelize 
+* Postgres
+* CSS/ HTML
+* Heroku 
+* JavaScript
+* Express
+* JWT AUTH
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ERD, Trellos, Vision
 
-### Code Splitting
+[ERD/ Hierarchy Component Chart](https://lucid.app/lucidchart/4c4aae4c-7b8d-457a-9782-e77078b23c5d/edit?invitationId=inv_9d353614-d896-4b10-8409-e493247efba5)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Trello Board](https://trello.com/b/BuPqW8gH/grand-turismo-forumla-2-project-3)
