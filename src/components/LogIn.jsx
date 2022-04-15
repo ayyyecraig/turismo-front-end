@@ -5,8 +5,14 @@ const LogIn = () => {
     return (
         <div>
             <form>
-                <input type="text">Email:</input>
-                <input type="text">Password:</input>
+                <label>
+                    Email:
+                    <input type="text" />
+                </label>
+                <label>
+                    Password:
+                    <input type="text" />
+                </label>
             </form>
         </div>
     )

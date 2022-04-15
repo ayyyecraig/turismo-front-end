@@ -5,9 +5,18 @@ const Register = () => {
     return (
         <div>
             <form>
-                <input type="text">Name:</input>
-                <input type="text">Email:</input>
-                <input type="text">Password:</input>
+                <label>
+                    Name:
+                    <input type="text" />
+                </label>
+                <label>
+                    Email:
+                    <input type="text" />
+                </label>
+                <label>
+                    Password:
+                    <input type="text" />
+                </label>
             </form>
         </div>
     )
