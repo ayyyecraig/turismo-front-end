@@ -4,7 +4,10 @@ const Reviews = () => {
 
     return (
         <div>
-            <input type="text"></input>
+            <form>
+                <input type="text" />
+                <button>Submit</button>
+            </form>
         </div>
     )
 
