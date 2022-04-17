@@ -1,13 +1,20 @@
-import React from 'react'
+// import { useNavigate } from 'react-router-dom'
 
 
- 
-export default function Home() {
-    return (
-        <div>
-            <h1>Welcome to Car App</h1> 
-        </div>
-    )
+const Home = () => {
+//   let navigate = useNavigate()
 
+  return (
+    <div className="home-container col">
+    
+
+      {/* <section className="welcome-signin">
+        <button onClick={() => navigate('/signin')}>
+          Click Here To Get Started
+        </button>
+      </section> */}
+    </div>
+  )
 }
 
+export default Home
