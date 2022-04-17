@@ -11,7 +11,7 @@ const Nav = () => {
                 <Link to='/viewcars' className="links">Garage</Link>
                 <Link to='/viewparts' className="links">Buy Parts</Link>
                 {/* If logged in */}
-                <p>Hello [name]</p>
+                {/* <p>Hello [name]</p> */}
             </div>
         </nav>
     )
