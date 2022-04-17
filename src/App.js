@@ -9,8 +9,8 @@ import Reviews from './pages/Reviews'
 import Register from './pages/Register'
 import LogIn from './pages/LogIn'
 
-import { CheckSession } from './services/Auth'
-import { useEffect } from 'react'
+// import { CheckSession } from './services/Auth'
+// import { useEffect } from 'react'
   
 export default function App() {
 //     const [authenticated, toggleAuthenticated] = useState(false)
@@ -54,6 +54,7 @@ export default function App() {
                     <Route path="/parts" element={<Parts />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<LogIn />} />
+                    <Route path="/reviews" element={<Reviews />} />
                 </Routes>
             </main>
         </div>
