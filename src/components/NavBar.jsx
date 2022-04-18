@@ -1,6 +1,8 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-const NavBar = ({ authenicated, user, handleLogOut}) => {
+
+const Nav = () => {
     // let authenicatedOptions
     // if(user){
     //     authenicatedOptions = (
@@ -28,15 +30,18 @@ const NavBar = ({ authenicated, user, handleLogOut}) => {
     //     </nav>
     // )
     return (
-      <header>
-          <Link to="/">
+        <nav className="navbar">
             <div>
-              <h3>Car land Vroom Vroom</h3>
+                <Link to='/' className="links">Home</Link>
+                <Link to='/login' className="links">Log In</Link>
+                <Link to='/register' className="links">Register</Link>
+                <Link to='/garage' className="links">Garage</Link>
+                <Link to='/parts' className="links">Buy Parts</Link>
+                If logged in
+                <p>Hello [name]</p>
             </div>
-          </Link>
-          {/* {authenticated && user ? authenticatedOptions : publicOptions} : */}
-      </header>
+        </nav>
     )
 }
 
-export default NavBar
+export default Nav

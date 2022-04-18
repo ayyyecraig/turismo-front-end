@@ -1,8 +1,8 @@
 // import { useNavigate } from "react-router-dom"
-// import { useEffect, useState } from 'react'
+import React,{ useEffect, useState } from 'react'
 
 
-// const Car = () => {
+const Car = () => {
  
 // //     let navigate = useNavigate()
 
@@ -20,12 +20,12 @@
 // // }
 
 
-// return(
-//     <header>
-//         <div></div>
-//     </header>
-// )
+return(
+    <header>
+        <div></div>
+    </header>
+)
 
-// }
+}
 
-// export default Car
+export default Car
