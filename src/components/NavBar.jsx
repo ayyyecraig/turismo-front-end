@@ -37,6 +37,7 @@ const Nav = () => {
                 <Link to='/register' className="links">Register</Link>
                 <Link to='/garage' className="links">Garage</Link>
                 <Link to='/parts' className="links">Buy Parts</Link>
+                <Link to="/cars">Car Lot</Link>
                 If logged in
                 <p>Hello [name]</p>
             </div>
