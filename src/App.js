@@ -53,7 +53,7 @@ export default function App() {
                     <Route path="/cars" element={<Car />} />
                     <Route path="/parts" element={<Parts />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/login" element={<LogIn />} />
+                    <Route path="/login" element={<LogIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>} />
                     <Route path="/reviews" element={<Reviews />} />
                 </Routes>
             </main>

@@ -2,20 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Nav = () => {
-    let authenicatedOptions
+const Nav = ({ authenticated, user, handleLogOut }) => {
+    let authenticatedOptions
     if(user){
-        authenicatedOptions = (
+        authenticatedOptions = (
             <nav>
                 <h3>Hello, {user.email}</h3>
-                <Link to="/">Home</Link>
                 <Link to="/garage">Garage</Link>
                 {/* 11-13 might need to be modified once we test our run thru on the app */}
                 <Link onClick={handleLogOut} to="/">
                     Log Out
                 </Link> 
-                <Link to="/cars">Car Lot</Link>
-                <Link to="/parts">Specs and Mods</Link>
             </nav>
         )
     }
@@ -38,8 +35,7 @@ const Nav = () => {
                 <Link to='/garage' className="links">Garage</Link>
                 <Link to='/parts' className="links">Buy Parts</Link>
                 <Link to="/cars">Car Lot</Link>
-                If logged in
-                <p>Hello [name]</p>
+                {authenticated && user ? authenticatedOptions : publicOptions}
             </div>
         </nav>
     )

@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom'
 const Register = () => {
 let navigate = useNavigate()
   const [formValues, setFormValues] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
+    username: '',
     email: '',
     password: '',
     confirmPassword: ''
@@ -18,22 +20,22 @@ let navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     await RegisterUser({
-      name: formValues.name,
+      firstName: formValues.firstName,
+      lastName: formValues.lastName,
+      username: formValues.username,
       email: formValues.email,
       password: formValues.password
     })
-
-  setFormValues({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  })
-
-  navigate('/login')
-
+    setFormValues({
+      firstName: '',
+      lastName: '',
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    })
+    navigate('/login')
   }
 
   return (
@@ -41,13 +43,35 @@ let navigate = useNavigate()
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">First Name</label>
             <input
               onChange={handleChange}
-              name="name"
+              name="firstName"
               type="text"
-              placeholder="John Smith"
-              value={formValues.name}
+              placeholder="John"
+              value={formValues.firstName}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="name">Last Name</label>
+            <input
+              onChange={handleChange}
+              name="lastName"
+              type="text"
+              placeholder="Smith"
+              value={formValues.lastName}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="name">Username</label>
+            <input
+              onChange={handleChange}
+              name="username"
+              type="text"
+              placeholder="john_smith"
+              value={formValues.username}
               required
             />
           </div>
