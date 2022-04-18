@@ -29,12 +29,12 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     return (
         <nav className="navbar">
             <div>
-                <Link to='/' className="links">Home</Link>
+                {/* <Link to='/' className="links">Home</Link>
                 <Link to='/login' className="links">Log In</Link>
                 <Link to='/register' className="links">Register</Link>
                 <Link to='/garage' className="links">Garage</Link>
                 <Link to='/parts' className="links">Buy Parts</Link>
-                <Link to="/cars">Car Lot</Link>
+                <Link to="/cars">Car Lot</Link> */}
                 {authenticated && user ? authenticatedOptions : publicOptions}
             </div>
         </nav>
