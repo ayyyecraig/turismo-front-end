@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
-import NavBar from './components/NavBar'
+import Nav from './components/NavBar'
 import Home from './pages/Home'
 import Car from './pages/Car'
 import Garage from './pages/Garage'
@@ -41,7 +41,7 @@ export default function App() {
 
     return (
         <div>
-            <NavBar
+            <Nav
                 // authenicated={authenicated}
                 // user={user}
                 // handleLogOut={handleLogOut} 
