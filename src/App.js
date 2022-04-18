@@ -49,7 +49,9 @@ export default function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/garage" element={<Garage />} />
+                    <Route path="/garage" element={<Garage 
+                    user={user}
+                    authenticated={authenticated}/>} />
                     <Route path="/cars" element={<Car />} />
                     <Route path="/parts" element={<Parts />} />
                     <Route path="/register" element={<Register />} />

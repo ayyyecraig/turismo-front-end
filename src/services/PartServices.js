@@ -1,8 +1,8 @@
 import Client from './api'
 
-export const GetAllCars = async () => {
+export const GetAllParts = async () => {
   try {
-    const res = await Client.get('/cars/view')
+    const res = await Client.get('/parts/view')
     return res.data
   } catch (error) {
     throw error
