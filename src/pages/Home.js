@@ -10,7 +10,7 @@ const Home = () => {
             <h1>Welcome to Car App</h1>
 
       <section className="welcome-signin">
-        <button onClick={() => navigate('/signin')}>
+        <button onClick={() => navigate('/login')}>
           Click Here To Get Started
         </button>
       </section>
