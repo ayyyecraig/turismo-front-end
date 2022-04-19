@@ -51,7 +51,7 @@ const Parts = () => {
                         <button onClick={toggleReviews}>{displayReview === false ? "Leave A Review" : "Hide Reviews" }</button>
                         {/* Maybe have this appear at button click maybe not? */}
                         <div>
-                            {displayReview ? <Reviews /> : null}
+                            {/* {displayReview ? <Reviews /> : null} */}
                         </div>
                     </div> 
                 </div>
