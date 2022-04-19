@@ -9,13 +9,12 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/garage">Garage</Link>
-                {/* 11-13 might need to be modified once we test our run thru on the app */}
-                <Link onClick={handleLogOut} to="/">
-                    Log Out
-                </Link> 
                 <Link to="/cars">Car Lot</Link>
                 <Link to="/parts">Specs and Mods</Link>
                 <h3>Hello, {user.email}</h3>
+                <Link onClick={handleLogOut} to="/">
+                    Log Out
+                </Link> 
             </nav>
         )
     }
@@ -24,9 +23,9 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
         <nav>
             <Link to="/">Home</Link>
             <Link to="/login">Garage</Link>
-            <Link to="register">Register</Link>
             <Link to="/cars">Car Lot</Link>
             <Link to="/parts">Specs and Mods</Link>
+            <Link to="register">Register</Link>
         </nav>
     )
     return (
