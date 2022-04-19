@@ -31,6 +31,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     return (
         <nav className="navbar">
             <div>
+                <img src="https://i.imgur.com/6Iiup0H.png" className="car-graphic" alt="car graphic" />
                
                 {authenticated && user ? authenticatedOptions : publicOptions}
             </div>
