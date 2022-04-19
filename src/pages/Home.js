@@ -18,11 +18,11 @@ const Home = ({ authenticated, user }) => {
       )
   }
   const publicOptions = (
-        <div className="home-container col">
-            <h1>Welcome to Car App</h1>
+        <div className="home-container">
+            <h1 className='duemila'>Duemila Ruote</h1>
 
       <section className="welcome-signin">
-        <button onClick={() => navigate('/login')}>
+        <button className='start' onClick={() => navigate('/login')}>
           Click Here To Get Started
         </button>
       </section>
