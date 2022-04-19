@@ -3,12 +3,14 @@ import { Route, Routes } from 'react-router'
 import Nav from './components/NavBar'
 import Home from './pages/Home'
 import Car from './pages/Car'
+import CarDetails from './pages/CarDetails'
 import Garage from './pages/Garage'
 import Parts from './pages/Parts'
 import PartDetails from './pages/PartDetails'
 import Reviews from './components/Reviews'
 import Register from './pages/Register'
 import LogIn from './pages/LogIn'
+import './App.css'
 
 import { CheckSession } from './services/Auth'
 import { useEffect, useState } from 'react'
@@ -49,7 +51,10 @@ export default function App() {
                 />
             <main>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home   
+                     authenticated={authenticated}
+                    user={user} />} 
+                    />
                     <Route path="/garage" element={<Garage 
                     user={user}
                     authenticated={authenticated}/>} />
@@ -59,7 +64,7 @@ export default function App() {
                     <Route path="/login" element={<LogIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>} />
                     <Route path="/reviews" element={<Reviews />} />
                     <Route path="parts/:id" element={<PartDetails />} />
-                    {/* <Route path="cars/:id" element={ } /> */}
+                    <Route path="cars/view/:car_id" element={<CarDetails /> } />
                 </Routes>
             </main>
         </div>

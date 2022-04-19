@@ -6,11 +6,13 @@ const Garage = () => {
         <div>
             <h2>Your car collection:</h2>
             <img src="https://i.pinimg.com/originals/3d/e7/53/3de753f684e11ee04fa18af7ae1085aa.jpg" alt='CAR'/>
-            <h3>Specs:</h3>
             <ul>
                 <li>Make:</li>
                 <li>Model:</li>
                 <li>Year:</li>
+            </ul>
+            <h3>Specs:</h3>
+            <ul>
                 <li>Body Type:</li>
                 <li>Horse Power:</li>
                 <li>Top Speed:</li>
