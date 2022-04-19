@@ -10,6 +10,7 @@ import PartDetails from './pages/PartDetails'
 import Reviews from './components/Reviews'
 import Register from './pages/Register'
 import LogIn from './pages/LogIn'
+import UpdateReview from './pages/UpdateReview'
 import './App.css'
 
 import { CheckSession } from './services/Auth'
@@ -63,6 +64,10 @@ export default function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<LogIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>} />
                     <Route path="/reviews" element={<Reviews />} />
+                    <Route path="/reviews/:id" element={<UpdateReview 
+                      user={user}
+                      authenticated={authenticated} />} 
+                    />
                     <Route path="parts/:id" element={<PartDetails
                       authenticated={authenticated}
                       user={user} />}

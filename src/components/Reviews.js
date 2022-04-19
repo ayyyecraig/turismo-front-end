@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import { GetReviews, DeleteReview } from '../services/ReviewServices';
+import { useNavigate } from 'react-router-dom';
 
 const Reviews = ({ user }) => {
 
     const [reviews, setReviews] = useState([])
 
     let { id } = useParams();
+    let navigate = useNavigate();
 
     const deleteReview = async (review) => {
         await DeleteReview(review.id)
     }
 
     const updateReview = (review) => {
-        console.log('update this sucka')
+        navigate(`/reviews/${review.id}`)
     }
 
     useEffect(() => {
