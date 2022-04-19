@@ -1,18 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
-
-const Home = ({authenicated, user}) => {
-
-  let authenicatedOptions
+const Home = ({ authenticated, user }) => {
+  let navigate = useNavigate()
+  let authenticatedOptions
   if(user){
-    authenicatedOptions = (
+    authenticatedOptions = (
       
         <div className="home-container col">
-          <h1>Welcome to Car App</h1>
+          <h1>fbsh</h1>
 
           <button onClick={() => navigate('/garage')   }>
-           Click Here To Get Started
+           My Garage
           </button>
          
         </div>
@@ -32,7 +32,7 @@ const Home = ({authenicated, user}) => {
 
   return (
     <div>
-    {authenticated && user ? authenticatedOptions : publicOptions}
+    {authenticated && user ? authenticatedOptions: publicOptions}
     </div>
   )
 
