@@ -38,13 +38,13 @@ const PartDetails = ({ authenticated, user }) => {
                     <button className="purchase-btn">Purchase</button>
                 </div>
             </div>
-            <div className="reviews-container">
                 {authenticated && user ?
-                    <WriteReview part={part} user={user}/>
-                    : <p className="login-message">Please log in to leave a review.</p>
+                    <div className="reviews-container">
+                        <WriteReview part={part} user={user}/>
+                        <Reviews part={part} user={user}/>
+                    </div>
+                    : <p className="login-message">Please log in to view or leave a review.</p>
                 }
-                <Reviews part={part} user={user}/>
-            </div>
         </div>
     )
 

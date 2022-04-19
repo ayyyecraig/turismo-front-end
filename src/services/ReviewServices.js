@@ -31,3 +31,12 @@ export const NewReview = async (rating, content, ownerId, partId) => {
         throw error
     }
 }
+
+export const ReviewUpdate = async (reviewId, rating, content) => {
+    try {
+        const res = await Client.put(`/reviews/${reviewId}`)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
