@@ -1,5 +1,4 @@
 import Client from './api'
-import { useParams } from 'react-router-dom'
 
 
 export const GetAllParts = async () => {
@@ -11,10 +10,9 @@ export const GetAllParts = async () => {
   }
 }
 
-export const GetPartById = async () => {
+export const GetPartById = async (partId) => {
   try {
-    let { id } = useParams()
-    const res = await Client.get(`/parts/view/${ id }`)
+    const res = await Client.get(`/parts/view/${partId}`)
     return res.data
   } catch (error) {
     throw error

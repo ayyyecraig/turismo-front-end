@@ -48,13 +48,17 @@ const Parts = () => {
                     <h3>Cost: ${part.price}</h3>
                     <button>Purchase</button>
                     <div>
-                        {displayReview ? <Reviews /> : null}
-                    </div>
-                </div> 
-            </div>
-            ))
-            }
-        </ul>
+                        <button onClick={toggleReviews}>{displayReview === false ? "Leave A Review" : "Hide Reviews" }</button>
+                        {/* Maybe have this appear at button click maybe not? */}
+                        <div>
+                            {/* {displayReview ? <Reviews /> : null} */}
+                        </div>
+                    </div> 
+                </div>
+                ))
+                }
+            </ul>
+        </div>
     </div>
     )
 
