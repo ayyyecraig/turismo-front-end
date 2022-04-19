@@ -8,7 +8,7 @@ const Car = () => {
     let navigate = useNavigate()
 
     const showCar = (car) => {
-        navigate(`view/${car.id}`)
+        navigate(`view/:${car.id}`)
     }
 
     const [cars, setCars] = useState([])
