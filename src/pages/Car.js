@@ -1,6 +1,6 @@
 // import { useNavigate } from "react-router-dom"
 import React,{ useEffect, useState } from 'react'
-import { GetAllCars } from '../services/PublicServices'
+import { GetAllCars } from '../services/CarServices'
 
 
 const Car = () => {

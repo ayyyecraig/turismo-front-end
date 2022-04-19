@@ -3,15 +3,14 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Home = ({ authenticated, user }) => {
+ 
   let navigate = useNavigate()
   let authenticatedOptions
-  if(user){
+  if(user){ 
     authenticatedOptions = (
       
         <div className="home-container col">
-          <h1>fbsh</h1>
-
-          <button onClick={() => navigate('/garage')   }>
+          <button onClick={() => navigate('/garage')}>
            My Garage
           </button>
          
