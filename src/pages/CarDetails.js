@@ -20,17 +20,21 @@ const CarDetails = () => {
 
     return(
         <div>
-            <h1>{cars.make}</h1>
-            <h2>{cars.model}</h2>
-            <h2>{cars.year}</h2>
-            <h2>{cars.bodyType}</h2>
-            <img className="car-image" src={cars.image} alt="car"  style={{display: 'block', maxWidth:'50%'}}/>
-            <h3>Top Speed: {cars.topSpeed}</h3>
-            <h3>Acceleration: {cars.acceleration}</h3>
-            <h3>Horsepower: {cars.horsePower}</h3>
-            <h3>Curb Weight: {cars.weight}</h3>
-            <h3>Price: ${cars.price}</h3>
-            <button>Purchase</button>
+            <section className='car-details'>
+                <h1>{cars.make}</h1>
+                <h2>{cars.model}</h2>
+                <h2>{cars.year}</h2>
+                <h2>{cars.bodyType}</h2>
+            </section>
+            <img className="car-img-details" src={cars.image} alt="car"  style={{ maxWidth:'50%'}}/>
+            <section className='performance'>
+                <h3 className='p1'>Top Speed: {cars.topSpeed} MPH</h3>
+                <h3 className='p2'>Acceleration: 0 to 60 MPH in {cars.acceleration} secs </h3>
+                <h3 className='p3'>Horsepower: {cars.horsePower} hp</h3>
+                <h3 className='p4'>Curb Weight: {cars.weight} lbs</h3>
+                <h3 className='p5'>Price: $ {cars.price}</h3>
+                <button>Purchase</button>    
+             </section>
         </div>
     )
 

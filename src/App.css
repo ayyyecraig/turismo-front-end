@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -23,25 +24,65 @@
   flex-direction: row;
   justify-content: center;
   margin: 10px;
+  font-family:'Syncopate', sans-serif;
   
 }
 
 .links {
   margin: 10px
+
 }
+
+.links:visited{
+  color:#fa8531
+  ;
+}
+.links:active{
+ color:#607c96;
+}
+/* home page */
+
+.home-container{
+  font-family: 'Rajdhani', sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 124px 345px;
+
+}
+
+.duemila{
+  margin: 0px 45px;
+}
+
+.start{
+  font-family: 'Syncopate', sans-serif;
+  border: none;
+  height: 28px;
+  background-color:black;
+  color:white;
+  border-radius: 8px;
+
+}
+
+.start:hover{
+  color: #9cffe8;
+}
+/* all cars page */
 
 .car-item {
   display: flex;
   font-size: 5px;
   text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  justify-content: space-evenly;
  } 
 
  .car-item:hover{
-  font-size: 7px;
+  font-size: 20px;
   transform: scale(0.9);
   box-shadow: 0px 5px 0px -5px rgba(0,0,0,1);
-
-
 
  }
 
@@ -58,6 +99,54 @@
 
 }
 
+/* car details page */
+
 .car-image:hover{
-  transform: scale(1.8);
+  transform: scale(2.8);
+}
+
+.car-details{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px 243px;
+  font-family:'Syncopate', sans-serif;
+  
+}
+
+.car-img-details{
+  display:block;
+  margin: auto;
+}
+
+.performance{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: larger;
+}
+
+/* performance details  */
+
+.p1{
+  margin:7px
+}
+
+.p2{
+  margin: 7px;
+}
+
+.p3{
+  margin: 7px;
+}
+
+.p4{
+  margin: 7px;
+}
+
+.p5{
+  margin: 7px;
 }
