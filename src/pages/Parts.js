@@ -46,6 +46,7 @@ return (
                     <div>
                         {displayReview ? <Reviews /> : null}
                     </div>
+                    <p>example</p>
                 </div> 
             </div>
             ))
