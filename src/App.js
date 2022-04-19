@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router'
 import Nav from './components/NavBar'
 import Home from './pages/Home'
 import Car from './pages/Car'
+import CarDetails from './pages/CarDetails'
 import Garage from './pages/Garage'
 import Parts from './pages/Parts'
 import PartDetails from './pages/PartDetails'
@@ -62,7 +63,7 @@ export default function App() {
                     <Route path="/login" element={<LogIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>} />
                     <Route path="/reviews" element={<Reviews />} />
                     <Route path="parts/:id" element={<PartDetails />} />
-                    {/* <Route path="cars/:id" element={ } /> */}
+                    <Route path="cars/view/:car_id" element={<CarDetails /> } />
                 </Routes>
             </main>
         </div>
