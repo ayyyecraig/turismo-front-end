@@ -1,22 +1,31 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { GetReviews } from '../services/ReviewServices';
 
 const Reviews = () => {
 
-    const [review, setReview] = useState('')
-    useEffect(() => {console.log(review)}, [review])
+    const [reviews, setReviews] = useState([])
 
-    const [newReview, setNewReview] = useState()
-    const submitReview = {setNewReview}
+    let { id } = useParams();
+
+    useEffect(() => {
+        const handleReviews = async () => {
+            const data = await GetReviews(id)
+            setReviews(data)
+        }
+        handleReviews()
+    }, [])
 
     return (
-        <div>
-            <form className="reviews">
-                <textarea type="text" value={review} onChange={e => setReview(e.target.value)} placeholder="Write a review" className="reviewBox"/>
-                <button>Submit</button>
-            </form>
-            {/* Have this appear after hitting submit */}
-             <h4>Your Review:</h4>
-            <p>Example text</p> 
+        <div className="previous-reviews">
+           {
+            reviews.map((review) => (
+                <div className="review-item" key={review.id}>
+                    <p className="review-rating">{review.rating}</p>
+                    <p className="review-content">{review.content}</p>
+                </div>  
+            ))
+           }
         </div>
     )
 

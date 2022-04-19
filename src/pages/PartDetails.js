@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 
-const PartDetails = () => {
+const PartDetails = ({ authenticated, user }) => {
 
     let { id } = useParams()
 
@@ -16,20 +16,35 @@ const PartDetails = () => {
             const data = await GetPartById(id)
             console.log(data)
             setPart(data)
-
         }
         handleParts()
     }, [])
 
     return (
-        <div className="part-details-container">
-            <p className="part-details-name">{part.name}</p>
-            <img className="part-details-image" src={part.image} alt={`Image of ${part.name}`}/>
-            <p className=""></p>
-            <p className=""></p>
-            <p className=""></p>
-            <p className=""></p>
-            <p className=""></p>
+        <div className="part-details-page">
+            <div className="part-details-container">
+                <p className="part-details-name">{part.name}</p>
+                <img className="part-details-image" src={part.image} alt={`Image of ${part.name}`}/>
+                <div className="part-details-effects">
+                    <p className="part-details-horsepower"> Horsepower Effect: {part.horsePowerEffect}</p>
+                    <p className="part-details-speed">Top Speed Effect: {part.topSpeedEffect}</p>
+                    <p className="part-details-acceleration">Acceleration Effect: {part.accelerationEffect}</p>
+                    <p className="part-details-braking"> Braking Effect: {part.brakingEffect}</p>
+                    <p className="part-details-handling">Handling Effect: {part.handlingEffect}</p>
+                </div>
+                <div className="part-details-purchase-container">
+                    <p className="part-details-price">Price: ${part.price}.00</p>
+                    <p>Weight: {part.weight} lbs</p>
+                    <button className="purchase-btn">Purchase</button>
+                </div>
+            </div>
+            <div className="reviews-container">
+                {authenticated && user ?
+                    <WriteReview part={part} user={user}/>
+                    : <p className="login-message">Please log in to leave a review.</p>
+                }
+                <Reviews part={part}/>
+            </div>
         </div>
     )
 
