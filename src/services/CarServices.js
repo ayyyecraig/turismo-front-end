@@ -9,9 +9,9 @@ export const GetAllCars = async () => {
   }
 }
 
-export const GetCarDetails = async () => {
+export const GetCarDetails = async (car_id) => {
   try {
-    const res = await Client.get('/cars/view/:car_id')
+    const res = await Client.get(`/cars/view/${car_id}`)
     return res.data
   } catch (error) {
     throw error
