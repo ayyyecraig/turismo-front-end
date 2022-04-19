@@ -39,19 +39,19 @@ return (
                 <h3>Acceleration Effect: {part.accelerationEffect}</h3>
                 <h3>Horsepower: {part.horsePowerEffect}</h3>
                 <h3>Cost: ${part.price}</h3>
+                <button>Purchase</button>
+                <div>
+                    <button onClick={toggleReviews}>{displayReview === false ? "Leave A Review" : "Hide Reviews" }</button>
+                    {/* Maybe have this appear at button click maybe not? */}
+                    <div>
+                        {displayReview ? <Reviews /> : null}
+                    </div>
+                </div> 
             </div>
             ))
             }
         </ul>
-        <button>Purchase</button>
     </div>
-    <div>
-        <button onClick={toggleReviews}>{displayReview === false ? "Leave A Review" : "Hide Reviews" }</button>
-        {/* Maybe have this appear at button click maybe not? */}
-        <div>
-            {displayReview ? <Reviews /> : null}
-        </div>
-    </div> 
 </div>
 )
 
