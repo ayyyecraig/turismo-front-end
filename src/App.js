@@ -3,9 +3,11 @@ import { Route, Routes } from 'react-router'
 import Nav from './components/NavBar'
 import Home from './pages/Home'
 import Car from './pages/Car'
+import CarDetails from './pages/CarDetails'
 import Garage from './pages/Garage'
 import Parts from './pages/Parts'
-import Reviews from './pages/Reviews'
+import PartDetails from './pages/PartDetails'
+import Reviews from './components/Reviews'
 import Register from './pages/Register'
 import LogIn from './pages/LogIn'
 import './App.css'
@@ -61,6 +63,8 @@ export default function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<LogIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>} />
                     <Route path="/reviews" element={<Reviews />} />
+                    <Route path="parts/:id" element={<PartDetails />} />
+                    <Route path="cars/view/:car_id" element={<CarDetails /> } />
                 </Routes>
             </main>
         </div>
