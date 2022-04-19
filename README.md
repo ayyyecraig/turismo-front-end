@@ -54,3 +54,6 @@ Sam and Dylan hitting the back end starting strong with migrations, databases, a
 [ERD/ Hierarchy Component Chart](https://lucid.app/lucidchart/4c4aae4c-7b8d-457a-9782-e77078b23c5d/edit?invitationId=inv_9d353614-d896-4b10-8409-e493247efba5)
 
 [Trello Board](https://trello.com/b/BuPqW8gH/grand-turismo-forumla-2-project-3)
+
+### Credits
+[Text Animation](https://frontendresource.com/css-text-animations/)
