@@ -48,7 +48,10 @@ export default function App() {
                 />
             <main>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home   
+                     authenticated={authenticated}
+                    user={user} />} 
+                    />
                     <Route path="/garage" element={<Garage 
                     user={user}
                     authenticated={authenticated}/>} />
