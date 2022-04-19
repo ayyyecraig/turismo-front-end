@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ViewCars = () => {
+const Garage = () => {
 
     return (
         <div>
             <h2>Your car collection:</h2>
-            <img src="https://i.pinimg.com/originals/3d/e7/53/3de753f684e11ee04fa18af7ae1085aa.jpg"/>
+            <img src="https://i.pinimg.com/originals/3d/e7/53/3de753f684e11ee04fa18af7ae1085aa.jpg" alt='CAR'/>
             <h3>Specs:</h3>
             <ul>
                 <li>Make:</li>
@@ -27,4 +27,4 @@ const ViewCars = () => {
 
 }
 
-export default ViewCars
+export default Garage
