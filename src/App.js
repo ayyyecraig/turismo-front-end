@@ -10,6 +10,7 @@ import PartDetails from './pages/PartDetails'
 import Reviews from './components/Reviews'
 import Register from './pages/Register'
 import LogIn from './pages/LogIn'
+import './App.css'
 
 import { CheckSession } from './services/Auth'
 import { useEffect, useState } from 'react'
