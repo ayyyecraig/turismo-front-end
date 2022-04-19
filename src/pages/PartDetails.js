@@ -43,7 +43,7 @@ const PartDetails = ({ authenticated, user }) => {
                     <WriteReview part={part} user={user}/>
                     : <p className="login-message">Please log in to leave a review.</p>
                 }
-                <Reviews part={part}/>
+                <Reviews part={part} user={user}/>
             </div>
         </div>
     )
