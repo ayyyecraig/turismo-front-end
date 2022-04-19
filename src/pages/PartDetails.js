@@ -22,7 +22,15 @@ const PartDetails = () => {
     }, [])
 
     return (
-        <div></div>
+        <div className="part-details-container">
+            <p className="part-details-name">{part.name}</p>
+            <img className="part-details-image" src={part.image} alt={`Image of ${part.name}`}/>
+            <p className=""></p>
+            <p className=""></p>
+            <p className=""></p>
+            <p className=""></p>
+            <p className=""></p>
+        </div>
     )
 
 }
