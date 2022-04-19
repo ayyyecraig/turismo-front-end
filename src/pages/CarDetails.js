@@ -1,15 +1,6 @@
-import { useNavigate } from "react-router-dom"
 import React,{ useEffect, useState } from 'react'
-import { GetAllCars } from '../services/PublicServices'
 
-
-const Car = () => {
- 
-    let navigate = useNavigate()
-
-    const showCar = (car) => {
-        navigate(`view/${car.id}`)
-    }
+const CarDetails = () => {
 
     const [cars, setCars] = useState([])
 
@@ -21,7 +12,6 @@ const Car = () => {
         }
         handleCars()
     }, [])
- 
 
     return(
         <div>
@@ -46,4 +36,4 @@ const Car = () => {
 
 }
 
-export default Car
+export default CarDetails
