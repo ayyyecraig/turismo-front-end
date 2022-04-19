@@ -5,7 +5,8 @@ import Home from './pages/Home'
 import Car from './pages/Car'
 import Garage from './pages/Garage'
 import Parts from './pages/Parts'
-import Reviews from './pages/Reviews'
+import PartDetails from './pages/PartDetails'
+import Reviews from './components/Reviews'
 import Register from './pages/Register'
 import LogIn from './pages/LogIn'
 
@@ -48,7 +49,10 @@ export default function App() {
                 />
             <main>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home   
+                     authenticated={authenticated}
+                    user={user} />} 
+                    />
                     <Route path="/garage" element={<Garage 
                     user={user}
                     authenticated={authenticated}/>} />
@@ -57,6 +61,8 @@ export default function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<LogIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>} />
                     <Route path="/reviews" element={<Reviews />} />
+                    <Route path="parts/:id" element={<PartDetails />} />
+                    {/* <Route path="cars/:id" element={ } /> */}
                 </Routes>
             </main>
         </div>
