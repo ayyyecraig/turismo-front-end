@@ -5,7 +5,7 @@
 
 body{
   background-image: url("https://i.imgur.com/tyGEVV6.png");
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* .App-header {
@@ -189,4 +189,96 @@ body{
 
 .p5{
   margin: 7px;
+}
+
+
+/* forms  */
+
+.form{
+  display: flex;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  align-items: center;
+  flex-direction: column;
+  color:white;
+}
+
+label{
+  background-color: black;opacity: 0.8;
+  border-radius: 25px;
+ padding: 0px 15px;
+ margin: 5px;
+  
+}
+
+input{
+ border: none;
+ outline: none;
+ border-radius: 25px;
+ box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;
+ height:44px;
+ width: 298px;
+ background-color: rgb(145 102 70 / 52%);
+ font-family: 'Rajdhani', sans-serif;
+ font-size: 25px;
+ color: white;
+}
+/* login page button  */
+.login{
+  border: none;
+ outline: none;
+ border-radius: 25px;
+ box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;;
+ height:44px;
+ width: 298px;
+ background-color: rgb(145 102 70 / 52%);
+ font-family: 'Rajdhani', sans-serif;
+ font-size: 25px;
+ color: white;
+ margin: 24px;
+}
+.login:hover{
+  box-shadow: -2px -2px 5px ;
+}
+.login:active{
+  box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;
+}
+/* Register page */
+.col{
+  background-color: black;opacity: 0.8;
+ border-radius: 25px;
+ padding: 0px 15px;
+ margin: 67px 311px;
+ color:aliceblue;
+ 
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+/* register button  */
+.register{
+  border: none;
+ outline: none;
+ border-radius: 25px;
+ box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;;
+ height:44px;
+ width: 298px;
+ background-color: rgb(145 102 70 / 52%);
+ font-family: 'Rajdhani', sans-serif;
+ font-size: 25px;
+ color: white;
+ margin: 24px;
+ position: relative;
+ left: -18px;
+}
+.register:hover{
+  box-shadow: -2px -2px 5px ;
+}
+.register:active{
+  box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;
 }
