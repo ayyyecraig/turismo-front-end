@@ -10,7 +10,7 @@ import PartDetails from './pages/PartDetails'
 import Reviews from './components/Reviews'
 import Register from './pages/Register'
 import LogIn from './pages/LogIn'
-import UpdateReview from './pages/UpdateReview'
+import ReviewDetails from './pages/ReviewDetails'
 import './App.css'
 
 import { CheckSession } from './services/Auth'
@@ -64,7 +64,7 @@ export default function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<LogIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>} />
                     <Route path="/reviews" element={<Reviews />} />
-                    <Route path="/reviews/:id" element={<UpdateReview 
+                    <Route path="/reviews/:id" element={<ReviewDetails 
                       user={user}
                       authenticated={authenticated} />} 
                     />
