@@ -24,7 +24,7 @@ const PartDetails = ({ authenticated, user }) => {
         <div className="part-details-page">
             <div className="part-details-container">
                 <p className="part-details-name">{part.name}</p>
-                <img className="part-details-image" src={part.image} alt={`Image of ${part.name}`}/>
+                <img className="part-details-image" src={part.image} alt={`Image of ${part.name}`} style={{display: 'block', maxWidth:'50%'}}/>
                 <div className="part-details-effects">
                     <p className="part-details-horsepower"> Horsepower Effect: {part.horsePowerEffect}</p>
                     <p className="part-details-speed">Top Speed Effect: {part.topSpeedEffect}</p>
@@ -38,13 +38,13 @@ const PartDetails = ({ authenticated, user }) => {
                     <button className="purchase-btn">Purchase</button>
                 </div>
             </div>
-            <div className="reviews-container">
                 {authenticated && user ?
-                    <WriteReview part={part} user={user}/>
-                    : <p className="login-message">Please log in to leave a review.</p>
+                    <div className="reviews-container">
+                        <WriteReview part={part} user={user}/>
+                        <Reviews part={part} user={user}/>
+                    </div>
+                    : <p className="login-message">Please log in to view or leave a review.</p>
                 }
-                <Reviews part={part} user={user}/>
-            </div>
         </div>
     )
 

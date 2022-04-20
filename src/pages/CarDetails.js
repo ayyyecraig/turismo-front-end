@@ -26,14 +26,14 @@ const CarDetails = () => {
                 <h2>{cars.year}</h2>
                 <h2>{cars.bodyType}</h2>
             </section>
-            <img className="car-img-details" src={cars.image} alt="car"  style={{ maxWidth:'50%'}}/>
+            <img className="car-img-details" src={cars.image} alt="car"  style={{ maxWidth:'30%'}}/>
             <section className='performance'>
                 <h3 className='p1'>Top Speed: {cars.topSpeed} MPH</h3>
                 <h3 className='p2'>Acceleration: 0 to 60 MPH in {cars.acceleration} secs </h3>
                 <h3 className='p3'>Horsepower: {cars.horsePower} hp</h3>
                 <h3 className='p4'>Curb Weight: {cars.weight} lbs</h3>
                 <h3 className='p5'>Price: $ {cars.price}</h3>
-                <button>Purchase</button>    
+                <button className='purchase'>Purchase</button>    
              </section>
         </div>
     )
