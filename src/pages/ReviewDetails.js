@@ -7,6 +7,7 @@ const ReviewDetails = ({ user, authenticated }) => {
 
 
     const [ formValues, setFormValues ] = useState({
+        username: '',
         rating: '',
         content: ''
     });
@@ -20,7 +21,12 @@ const ReviewDetails = ({ user, authenticated }) => {
         const data = await GetReviewById(id)
         console.log(data)
         setReview(data)
-        setFormValues({ rating: review.rating, content: review.content })
+        setFormValues({ username: review.User.username, rating: review.rating, content: review.content })
+    }
+
+
+    const handleData = async () => {
+        handleReview()
     }
 
     useEffect(() =>{
@@ -43,6 +49,7 @@ const ReviewDetails = ({ user, authenticated }) => {
 
     return (
         <div className="update-review-form">
+            <p className="review-details-username">{formValues.username}</p>
             <input
                 className="update-review-input"
                 type="number"

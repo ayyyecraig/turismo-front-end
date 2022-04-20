@@ -1,10 +1,10 @@
-// import Client from './api'
+import Client from './api'
 
-// export const GetPosts = async () => {
-//   try {
-//     const res = await Client.get('/')
-//     return res.data
-//   } catch (error) {
-//     throw error
-//   }
-// }
+export const GetUsers = async () => {
+  try {
+    const res = await Client.get('/users/')
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
