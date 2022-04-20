@@ -72,7 +72,7 @@ export default function App() {
                       authenticated={authenticated}
                       user={user} />}
                     />
-                    <Route path="cars/view/:id" element={<CarDetails /> } />
+                    <Route path="cars/view/:id" element={<CarDetails user={user} authenticated={authenticated} /> } />
                 </Routes>
             </main>
         </div>
