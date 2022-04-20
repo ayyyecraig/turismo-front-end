@@ -363,6 +363,7 @@ input{
   justify-content: space-evenly;
   margin: 0px 243px;
   font-family:'Syncopate', sans-serif;
+  font-weight: bolder;
 }
 
 .part-details-effects{
@@ -372,10 +373,11 @@ input{
   flex-wrap: wrap;
   font-family: 'Rajdhani', sans-serif;
   color: black;
-  background-color: rgb(67 255 0 / 16%);
+  background-color: rgb(118 238 75 / 72%);
   max-height: fit-content;
   margin: auto;
   font-size: larger;
+  /* border-radius: 0px;  ppossible */
 }
 
 .part-details-purchase-container{
@@ -386,7 +388,7 @@ input{
   font-family: 'Rajdhani', sans-serif;
   font-size: larger;
   color: black;
-  background-color: rgb(67 255 0 / 16%);
+  background-color: rgb(118 238 75 / 72%);
   max-height: fit-content;
   margin: auto;
 }
@@ -455,4 +457,44 @@ border: none;
 }
 .logout:active{
   box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;
+}
+
+.start2{
+  font-family: 'Syncopate', sans-serif;
+  border: none;
+  height: 28px;
+  background-color:white;
+  color:black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 182px 0px;
+}
+
+.start2:hover{
+  color: #c85000;
+}
+
+
+.submit-button{
+  font-family: 'Syncopate', sans-serif;
+  border: none;
+  height: 28px;
+  background-color:white;
+  color:black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4px 0px;
+}
+
+.submit-button:hover{
+  color: #c85000;
+}
+
+.review-input{
+  background-color: #51863e;
+  color: white;
 }
