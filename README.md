@@ -57,3 +57,5 @@ Sam and Dylan hitting the back end starting strong with migrations, databases, a
 
 ### Credits
 [Text Animation](https://frontendresource.com/css-text-animations/)
+
+[star ratings](https://codeconvey.com/css-star-rating-radio-buttons/)
