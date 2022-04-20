@@ -32,18 +32,19 @@ const Parts = () => {
 
     return (
         <div>
-        <div>
-            <ul>
+        <div className='parts'>
+            
                 {
                 parts.map((part) => (
                 <div className="part-card"  key={part.id} onClick={() => partDetails(part)}>
-                    <h2>{part.name}</h2>
-                    <img className='part-item' src={part.image} alt="part" style={{display: 'block', maxWidth:'50%'}}/>
+                    <img className='part-item' src={part.image} alt="part" style={{display: 'block', maxWidth:'40%'}}/>
+                     <h2>{part.name}</h2>
+                   
                     <h3>Cost: ${part.price}</h3>
                 </div>
                 ))
                 }
-            </ul>
+         
         </div>
     </div>
     )
