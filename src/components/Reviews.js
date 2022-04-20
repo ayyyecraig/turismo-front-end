@@ -34,9 +34,9 @@ const Reviews = ({ user }) => {
            {
             reviews.map((review) => (
                 <div className="review-item" key={review.id} onClick={() => viewReview(review)}>
-                    <p className="review-username">{review.User.username}</p>
-                    <p className="review-rating">Rating: {review.rating}/10</p>
-                    <p className="review-content"> Details: {review.content}</p>
+                    <p className="review-dets">{review.User.username}</p>
+                    <p className="review-dets">Rating: {review.rating} Stars</p>
+                    <p className="review-dets"> Details: {review.content}</p>
                 </div>  
             ))
            }
