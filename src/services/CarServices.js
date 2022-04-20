@@ -30,7 +30,7 @@ export const CreateCar = async (owner_id) => {
 
 export const PurchaseCar = async (car_id, owner_id) => {
   try {
-    const res = await Client.put(`/cars/${car_id}`, {ownerId: owner_id})
+    const res = await Client.put(`/cars/${car_id}`, {ownerId: owner_id, status: false})
     return res.data
   } catch (error) {
     throw error

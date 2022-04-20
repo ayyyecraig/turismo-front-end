@@ -32,7 +32,15 @@ const Car = () => {
                     <div className="dets">
                     <h1>{car.make}</h1>
                     <h2>{car.model}</h2>
-                    <h3>Price: ${car.price}</h3>
+                    {car.User ?
+                       <h3>Owner: {car.User.username}</h3>
+                       : <h3>Buy From Dealer</h3>
+                    }
+                    {
+                    car.status ?
+                        <h3>Price: ${car.price}</h3>
+                        : <h3>Not For Sale</h3>
+                    }
                     </div>
                 </div>
             ))

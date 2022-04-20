@@ -25,16 +25,6 @@ const CarDetails = ({user, authenticated}) => {
         handleCars()
     }, [])
 
-    // const addToGarage = () => {
-    //     setGarage(...garage, cars)
-    //     console.log(garage)
-    // }
-
-    // const test = async () => {
-    //     console.log(cars.make)
-    //     setGarage(cars.make)
-    // }
-
     const addToGarage = () => {
         PurchaseCar(cars.id, user.id)
         navigate('/garage')
@@ -56,10 +46,19 @@ const CarDetails = ({user, authenticated}) => {
                 <h3 className='p3'>Horsepower: {cars.horsePower} hp</h3>
                 <h3 className='p4'>Curb Weight: {cars.weight} lbs</h3>
                 <h3 className='p5'>Price: $ {cars.price}</h3>
-                <button onClick={() => {addToGarage()}} className='purchase'>Purchase</button>    
+                {
+                    cars.status ?
+                    <button onClick={() => {addToGarage()}} className='purchase'>Purchase</button>
+                    : <h3>Contact owner for direct inquiry</h3>
+                }
+                {cars.User ?
+                    <div className="contact-info">
+                        <h3>Owner: {cars.User.username}</h3>
+                        <h3>Owner Email: {cars.User.email}</h3>
+                    </div>
+                    : <h3>Buy From Dealer</h3>
+                }   
              </section>
-             {/* <UsersCars garage={cars} /> */}
-             {/* <Link><Garage garage={garage} /></Link> */}
         </div>
     )
 

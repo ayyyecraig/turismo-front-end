@@ -2,7 +2,6 @@ import React,{ useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GetAllCars } from '../services/CarServices'
 
-///
 
 const Garage = ({user}) => {
 
