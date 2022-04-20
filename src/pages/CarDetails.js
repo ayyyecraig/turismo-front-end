@@ -1,22 +1,45 @@
 import React,{ useEffect, useState } from 'react'
 import { GetAllCars, GetCarDetails } from '../services/CarServices'
 import { useParams } from 'react-router-dom';
+import UsersCars from '../components/UsersCars';
+import { PurchaseCar } from '../services/CarServices';
+import { useNavigate } from 'react-router-dom';
 
 
-const CarDetails = () => {
+const CarDetails = ({user, authenticated}) => {
+
+    let navigate = useNavigate()
 
     let { id } = useParams()
 
     const [cars, setCars] = useState([])
+
 
     useEffect(() =>{
         const handleCars = async () => {
             const data = await GetCarDetails(id)
             console.log(data)
             setCars(data)
+        
         }
         handleCars()
     }, [])
+
+    // const addToGarage = () => {
+    //     setGarage(...garage, cars)
+    //     console.log(garage)
+    // }
+
+    // const test = async () => {
+    //     console.log(cars.make)
+    //     setGarage(cars.make)
+    // }
+
+    const addToGarage = () => {
+        PurchaseCar(cars.id, user.id)
+        navigate('/garage')
+        console.log(cars)
+    }
 
     return(
         <div>
@@ -33,8 +56,10 @@ const CarDetails = () => {
                 <h3 className='p3'>Horsepower: {cars.horsePower} hp</h3>
                 <h3 className='p4'>Curb Weight: {cars.weight} lbs</h3>
                 <h3 className='p5'>Price: $ {cars.price}</h3>
-                <button className='purchase'>Purchase</button>    
+                <button onClick={() => {addToGarage()}} className='purchase'>Purchase</button>    
              </section>
+             {/* <UsersCars garage={cars} /> */}
+             {/* <Link><Garage garage={garage} /></Link> */}
         </div>
     )
 

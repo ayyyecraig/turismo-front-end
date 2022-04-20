@@ -1,29 +1,47 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { GetAllCars } from '../services/CarServices'
 
-const Garage = () => {
+///
 
-    return (
+const Garage = ({user}) => {
+
+    let navigate = useNavigate()
+
+    const showCar = (car) => {
+        navigate(`view/${car.id}`)
+    }
+
+    const [cars, setCars] = useState([])
+
+    useEffect(() =>{
+        const handleCars = async () => {
+            const data = await GetAllCars()
+            let selectedCar = []
+            data.forEach((car) => {
+                if(car.ownerId === user.id) {
+                    selectedCar.push(car)
+                }
+            }) 
+            console.log(data)
+            setCars(selectedCar)
+        }
+        handleCars()
+    }, [cars.id])
+ 
+
+    return(
         <div>
-            <h2>Your car collection:</h2>
-            <img src="https://i.pinimg.com/originals/3d/e7/53/3de753f684e11ee04fa18af7ae1085aa.jpg" alt='CAR'/>
-            <ul>
-                <li>Make:</li>
-                <li>Model:</li>
-                <li>Year:</li>
-            </ul>
-            <h3>Specs:</h3>
-            <ul>
-                <li>Body Type:</li>
-                <li>Horse Power:</li>
-                <li>Top Speed:</li>
-                <li>Acceleration:</li>
-                <li>Weight:</li>
-                <li>Price:</li>
-            </ul>
-            <h3>Modifications:</h3>
-            <ul>
-                <li>Example</li>
-            </ul>
+        {
+            cars.map((car) => (
+                <div className="car-item"  onClick={() => showCar(car)} >
+                    <img className="car-image" src={car.image} alt="car"  style={{display: 'block', maxWidth:'50%'}}/>
+                    <h1>{car.make}</h1>
+                    <h2>{car.model}</h2>
+                    <h3>Price: ${car.price}</h3>
+                </div>
+            ))
+        }
         </div>
     )
 
