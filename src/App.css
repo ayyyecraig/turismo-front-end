@@ -46,6 +46,7 @@ body{
   width: auto;
   position: relative;
   left: -158px;
+  top: 25px;
   animation: rotation 5s infinite linear;
 }
 @keyframes rotation {
@@ -268,7 +269,7 @@ input{
   background-color: black;opacity: 0.8;
  border-radius: 25px;
  padding: 0px 15px;
- margin: 67px 311px;
+ margin: 67px 237px;
  color:aliceblue;
  
 }
@@ -417,17 +418,36 @@ border: none;
   max-width: 100px;
 }
 
+
+/* authenticated nav bar */
+
+.authenticated{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-family: 'Syncopate', sans-serif;
+ 
+  height: 100px;
+  align-items: baseline;
+  align-content: center;
+}
 .logout{
   border: none;
  outline: none;
  border-radius: 25px;
- height:44px;
- width: 298px;
  background-color: rgb(154 144 97 / 27%);
  font-family: 'Rajdhani', sans-serif;
  font-size: 25px;
  color: white;
- margin: 24px;
+ margin: 10px;
+ position: relative;
+ bottom: 39px;
+ text-decoration: none;
+ width: 106px;
+ max-height: fit-content;
+ text-align: center;
+
+
 }
 
 .logout:hover{
@@ -435,17 +455,4 @@ border: none;
 }
 .logout:active{
   box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;
-}
-
-
-.authenticated{
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  font-family: 'Syncopate', sans-serif;
-  background-color: rgb(0 0 0);
-  opacity: 0.8;
-  height: 100px;
-  align-items: baseline;
-  align-content: center;
 }
