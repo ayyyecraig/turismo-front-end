@@ -54,11 +54,11 @@ export const AddModToCar = async (
   try {
     const res = await Client.put(`/cars/${car_id}`, {
       weight: parseInt(weight) + parseInt(weightFX),
-      topSpeed: speed + (speed * speedFX / 10),
-      acceleration: (parseFloat(acceleration) - parseFloat(acceleration) * parseFloat(accelerationFX)),
-      horsepower: (parseInt(horsepower) + parseInt(horsepower) * parseInt(horsepowerFX)),
-      braking: (parseInt(braking) + parseInt(braking) * parseInt(brakingFX)),
-      handling: (parseInt(handling) + parseInt(handling) * parseInt(handlingFX))
+      topSpeed: parseInt(speed) + (parseInt(speed) * parseInt(speedFX) / 10),
+      acceleration: parseFloat(acceleration) - (parseFloat(acceleration) * parseFloat(accelerationFX) / 10),
+      horsePower: parseInt(horsepower) + (parseInt(horsepower) * parseInt(horsepowerFX) / 10),
+      braking: parseInt(braking) + (parseInt(braking) * parseInt(brakingFX) / 10),
+      handling: parseInt(handling) + (parseInt(handling) * parseInt(handlingFX) / 10)
     })
     return res.data
   } catch (error) {
