@@ -578,6 +578,11 @@ border: none;
 }
 fieldset{
   border:none;
+  display: flex;
+  max-width: 280px;
+  margin: auto;
+
+
 }
 
 .previous-reviews{
