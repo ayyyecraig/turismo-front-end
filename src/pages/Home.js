@@ -10,6 +10,7 @@ const Home = ({ authenticated, user }) => {
     authenticatedOptions = (
       
         <div className="home-container col">
+          <h3 className='duemila'>Head to your Garage</h3>
           <button className="start2" onClick={() => navigate('/garage')}>
            My Garage
           </button>

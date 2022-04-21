@@ -408,10 +408,11 @@ input{
   flex-wrap: wrap;
   font-family: 'Rajdhani', sans-serif;
   color: black;
-  background-color: rgb(118 238 75 / 72%);
+  background-color: rgb(67 255 0 / 16%);
   max-height: fit-content;
   margin: auto;
   font-size: larger;
+  font-weight: revert;
   /* border-radius: 0px;  ppossible */
 }
 
@@ -423,7 +424,7 @@ input{
   font-family: 'Rajdhani', sans-serif;
   font-size: larger;
   color: black;
-  background-color: rgb(118 238 75 / 72%);
+  background-color: rgb(67 255 0 / 16%);
   max-height: fit-content;
   margin: auto;
 }
@@ -504,7 +505,7 @@ border: none;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 182px 0px;
+  margin: -18px 0px;
 }
 
 .start2:hover{
@@ -512,23 +513,30 @@ border: none;
 }
 
 /* reviews */
+.reviewBox{
+  border-radius: 20px;
+
+}
+
 .submit-button{
-  font-family: 'Syncopate', sans-serif;
   border: none;
-  height: 28px;
-  background-color:white;
-  color:black;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 4px 0px;
-}
-
+   outline: none;
+   border-radius: 25px;
+   height:44px;
+   width: 177px;
+   background-color: rgb(255 152 0 / 80%);
+   font-family: 'Rajdhani', sans-serif;
+   font-size: 25px;
+   font-weight: bolder;
+   color: black;
+  }
 .submit-button:hover{
-  color: #c85000;
+  box-shadow: -2px -2px 5px ;
 }
-
+.submit-button:active{
+  box-shadow: inset 6px 6px 6px #51863e, inset -6px -6px 6px #b11616;
+}
+  
 .review-input{
   background-color: #51863e;
   color: white;
@@ -586,6 +594,11 @@ fieldset{
 }
 
 .previous-reviews{
- background-color: rgb(195 114 114 / 45%);
+ background-color: rgb(255 152 0 / 80%);
+ border-radius: 20px;
+ display: flex;
+ align-items: center;
+ margin-top: 32px;
+
 }
 
