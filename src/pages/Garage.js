@@ -1,7 +1,6 @@
 import React,{ useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GetAllCars, SellCar } from '../services/CarServices'
-import { GetAllParts } from '../services/PartServices'
 
 
 const Garage = ({user}) => {
@@ -13,7 +12,6 @@ const Garage = ({user}) => {
     }
 
     const [cars, setCars] = useState([])
-    const [parts, setParts] = useState([])
 
     const handleCars = async () => {
         const data = await GetAllCars()
@@ -27,21 +25,10 @@ const Garage = ({user}) => {
         setCars(selectedCar)
     }
 
-    const handleParts = async () => {
-        const data = await GetAllParts()
-        let selectedParts = []
-        data.forEach((part) => {
-            if(part.ownerId === user.id) {
-                selectedParts.push(part)
-            }
-        }) 
-        console.log(data)
-        setParts(selectedParts)
-    }
+   
 
     useEffect(() =>{
         handleCars()
-        handleParts()
     }, [cars.id])
 
     const sellCarBtn = (carId) => {
@@ -50,9 +37,6 @@ const Garage = ({user}) => {
         navigate('/')
     }
 
-    const addPartBtn = (partId) => {
-        
-    }
     
     
  
@@ -77,23 +61,6 @@ const Garage = ({user}) => {
                     </div>
                 ))
             }
-            </div>
-            <div className="garage-parts">
-                <p className="parts-header">Mods And Parts</p>
-                {
-                    parts.map((part) => (
-                        <div className="part-card">
-                            <h1>{part.name}</h1>
-                            <img className="part-item" src={part.image} alt={`image of ${part.name}`} />
-                            {
-                                part.performance ?
-                                <p>Performance Mod</p>
-                                : <p>Cosmetic Mod</p>
-                            }
-                            <button onClick={() => addPartBtn(part.id)}>Add Mod</button>
-                        </div>
-                    ))
-                }
             </div>
         </div>
     )

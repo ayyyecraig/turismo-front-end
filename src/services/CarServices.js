@@ -37,6 +37,35 @@ export const PurchaseCar = async (car_id, owner_id) => {
   }
 }
 
+export const AddModToCar = async (
+    car_id, 
+    weight, 
+    weightFX, 
+    speed, 
+    speedFX, 
+    acceleration, 
+    accelerationFX, 
+    horsepower, 
+    horsepowerFX, 
+    braking, 
+    brakingFX, 
+    handling, 
+    handlingFX) => {
+  try {
+    const res = await Client.put(`/cars/${car_id}`, {
+      weight: parseInt(weight) + parseInt(weightFX),
+      topSpeed: parseInt(speed) + (parseInt(speed) * parseInt(speedFX) / 10),
+      acceleration: parseFloat(acceleration) - (parseFloat(acceleration) * parseFloat(accelerationFX) / 10),
+      horsePower: parseInt(horsepower) + (parseInt(horsepower) * parseInt(horsepowerFX) / 10),
+      braking: parseInt(braking) + (parseInt(braking) * parseInt(brakingFX) / 10),
+      handling: parseInt(handling) + (parseInt(handling) * parseInt(handlingFX) / 10)
+    })
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
 export const SellCar = async (car_id) => {
   try {
     const res = await Client.put(`/cars/${car_id}`, {status: true})
