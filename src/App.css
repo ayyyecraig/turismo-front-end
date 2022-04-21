@@ -335,10 +335,11 @@ input{
 .parts{
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
+  align-items: flex-start;
   align-content: flex-end;
   justify-content: space-evenly;
-
+  margin-left: 320px;
+  margin-top: 30px;
 }
 .part-card{
   display: flex;
@@ -355,7 +356,7 @@ input{
   overflow: hidden;
   position: relative;
   left:-300px;
-  
+  margin: 10px;
 }
 
 .part-card:hover{
@@ -390,6 +391,10 @@ input{
   max-height: 200px;
   max-width: 200px;
 
+}
+
+.part-text {
+  margin: auto 7px;
 }
 
 /* indivual parts details page */
