@@ -579,3 +579,8 @@ border: none;
 fieldset{
   border:none;
 }
+
+.previous-reviews{
+ background-color: rgb(195 114 114 / 45%);
+}
+
