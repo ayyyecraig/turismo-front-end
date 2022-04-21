@@ -37,7 +37,7 @@ const Parts = () => {
                 {
                 parts.map((part) => (
                 <div className="part-card"  key={part.id} onClick={() => partDetails(part)}>
-                    <img className='part-item' src={part.image} alt="part" style={{display: 'block', maxWidth:'40%'}}/>
+                    <img className='part-item' src={part.image} alt="part" style={{display: 'block', maxWidth:'80%'}}/>
                      <h2 className="part-text">{part.name}</h2>
                    
                     <h3 className="part-text">Cost: ${part.price}</h3>
