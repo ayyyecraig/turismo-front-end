@@ -36,7 +36,17 @@ const PartDetails = ({ authenticated, user }) => {
                     <p className="part-details-price">Price: ${part.price}.00</p>
                     <p>Weight: {part.weight} lbs</p>
                     <button className="purchase-btn">Purchase</button>
+                {/* //graph */}
                 </div>
+                <div class="donut"><div class="hole"></div></div>
+                <div class="legend">
+  <div class="segment1">Horsepower Effect: {part.horsePowerEffect}</div> 
+  <div class="segment2">Top Speed Effect: {part.topSpeedEffect}</div> 
+  <div class="segment3">Acceleration Effect: {part.accelerationEffect}</div> 
+  <div class="segment4">Braking Effect: {part.brakingEffect}</div> 
+  <div class="segment5">Handling Effect: {part.handlingEffect}</div> 
+</div>
+
             </div>
                 {authenticated && user ?
                     <div className="reviews-container">

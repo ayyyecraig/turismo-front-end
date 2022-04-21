@@ -413,7 +413,7 @@ input{
   max-height: fit-content;
   margin: auto;
   font-size: larger;
-  font-weight: revert;
+  font-weight: bolder;
   /* border-radius: 0px;  ppossible */
 }
 
@@ -603,3 +603,49 @@ fieldset{
 
 }
 
+/* (A) PIE CHART */
+.donut {
+  /* (A1) CIRCLE */
+  width: 300px; height: 300px;
+  border-radius: 50%;
+ 
+  /* (A2) SEGMENTS */
+  background: conic-gradient(
+    rgb(255 0 0) 0deg 80deg,
+    rgb(0 128 0) 80deg 196deg,
+    rgb(0 0 255) 190deg 315deg,
+    rgb(255 165 0) 288deg 313deg,
+    purple
+
+  );
+}
+
+.hole {
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: #fff;
+}
+ 
+
+.donut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend {
+  display: flex;
+  margin-top: 30px;
+}
+ 
+/* (C2) SEGMENTS */
+.legend div { padding: 0 10px; }
+.segment1 { background: red; }
+.segment2 { background: green; }
+.segment3 { background: blue; }
+.segment4{
+  background-color: orange;
+}
+.segment5{
+  background-color: purple;
+}
