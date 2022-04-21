@@ -1,13 +1,15 @@
 import Reviews from '../components/Reviews'
 import WriteReview from "../components/WriteReview";
-import { GetPartById } from '../services/PartServices';
+import { GetPartById, PurchasePart } from '../services/PartServices';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const PartDetails = ({ authenticated, user }) => {
 
     let { id } = useParams()
+    let navigate = useNavigate()
 
     const [part, setPart] = useState({})
 
@@ -19,6 +21,17 @@ const PartDetails = ({ authenticated, user }) => {
         }
         handleParts()
     }, [])
+
+    const addToGarage = () => {
+        if(part.stock > 0 && part.status === true) {
+            let partStock = part.stock - 1
+            PurchasePart(part.id, partStock, user.id)
+            navigate('/garage')
+        console.log(part)
+        } else {
+            alert('Oops! Looks like this item is no longer for sale or out of stock')
+        }
+    }
 
     return (
         <div className="part-details-page">
@@ -35,7 +48,7 @@ const PartDetails = ({ authenticated, user }) => {
                 <div className="part-details-purchase-container">
                     <p className="part-details-price">Price: ${part.price}.00</p>
                     <p>Weight: {part.weight} lbs</p>
-                    <button className="purchase-btn">Purchase</button>
+                    <button className="purchase-btn" onClick={()=>addToGarage()}>Purchase</button>
                 {/* //graph */}
                 </div>
                 <div class="donut"><div class="hole"></div></div>

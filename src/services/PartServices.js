@@ -19,9 +19,9 @@ export const GetPartById = async (partId) => {
   }
 }
 
-export const PurchasePart = async (car_id, owner_id) => {
+export const PurchasePart = async (part_id, part_stock, owner_id) => {
   try {
-    const res = await Client.put(`/cars/${car_id}`, {ownerId: owner_id, status: false})
+    const res = await Client.put(`/parts/${part_id}`, {ownerId: owner_id, stock: part_stock})
     return res.data
   } catch (error) {
     throw error
