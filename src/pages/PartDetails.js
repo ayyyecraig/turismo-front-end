@@ -38,28 +38,60 @@ const PartDetails = ({ authenticated, user }) => {
             <div className="part-details-container">
                 <p className="part-details-name">{part.name}</p>
                 <img className="part-details-image" src={part.image} alt={`Image of ${part.name}`} style={{display: 'block', maxWidth:'50%'}}/>
+
                 <div className="part-details-effects">
-                    <p className="part-details-horsepower"> Horsepower Effect: {part.horsePowerEffect}</p>
-                    <p className="part-details-speed">Top Speed Effect: {part.topSpeedEffect}</p>
-                    <p className="part-details-acceleration">Acceleration Effect: {part.accelerationEffect}</p>
-                    <p className="part-details-braking"> Braking Effect: {part.brakingEffect}</p>
-                    <p className="part-details-handling">Handling Effect: {part.handlingEffect}</p>
+                    <div class="svg-item" className='horsepower'>
+                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                            <circle class="donut-ring" cx="20" cy="10" r={part.horsePowerEffect}fill="transparent" stroke-width={part.horsePowerEffect}></circle>
+                            <text y="50%" x="50%" transform="translate(0, 2)" fontSize={"8px"}>
+                                <tspan text-anchor="middle" class="donut-percent">Horsepower Effect: {part.horsePowerEffect}</tspan>   
+                            </text>
+                        </svg>
+                    </div>
+
+                    <div class="svg-item" className='speedEffect'>
+                      <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                        <circle class="donut-ring" cx="20" cy="10" r={part.topSpeedEffect}fill="transparent" stroke-width={part.topSpeedEffect}></circle>
+                        <text y="50%" x="50%" transform="translate(0, 2)" fontSize={"8px"}>
+                            <tspan text-anchor="middle" class="donut-percent">TopSpeed Effect: {part.topSpeedEffect}</tspan>   
+                        </text>
+                      </svg>
+                    </div>
+
+
+                    <div class="svg-item" className='handlingEffect'>
+                      <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                        <circle class="donut-ring" cx="20" cy="10" r={part.handlingEffect}fill="transparent" stroke-width={part.handlingEffect}></circle>
+                        <text y="50%" x="50%" transform="translate(0, 2)" fontSize={"8px"}>
+                            <tspan text-anchor="middle" class="donut-percent">Handling Effect: {part.handlingEffect}</tspan>   
+                        </text>
+                      </svg>
+                    </div>
+
+                    <div class="svg-item" className='brakingEffect'>
+                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                          <circle class="donut-ring" cx="20" cy="10" r={part.brakingEffect}fill="transparent" stroke-width={part.brakingEffect}></circle>
+                          <text y="50%" x="50%" transform="translate(0, 2)" fontSize={"8px"}>
+                            <tspan text-anchor="middle" class="donut-percent">Braking Effect: {part.brakingEffect}</tspan>   
+                          </text>
+                        </svg>
+                    </div>
+
+                    <div class="svg-item" className='accelerationEffect'>
+                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                         <circle class="donut-ring"  cx="20" cy="10" r={part.accelerationEffect} fill="transparent" stroke-width={part.accelerationEffect}></circle>
+                         <text y="50%" x="50%" transform="translate(0, 2)" fontSize={"8px"}>
+                            <tspan text-anchor="middle" class="donut-percent">Acceleration Effect: {part.accelerationEffect}</tspan>   
+                         </text>
+                        </svg>
+                    </div>
                 </div>
                 <div className="part-details-purchase-container">
                     <p className="part-details-price">Price: ${part.price}.00</p>
                     <p>Weight: {part.weight} lbs</p>
                     <button className="purchase-btn" onClick={()=>addToGarage()}>Purchase</button>
-                {/* //graph */}
+               
                 </div>
-                <div class="donut"><div class="hole"></div></div>
-                <div class="legend">
-  <div class="segment1">Horsepower Effect: {part.horsePowerEffect}</div> 
-  <div class="segment2">Top Speed Effect: {part.topSpeedEffect}</div> 
-  <div class="segment3">Acceleration Effect: {part.accelerationEffect}</div> 
-  <div class="segment4">Braking Effect: {part.brakingEffect}</div> 
-  <div class="segment5">Handling Effect: {part.handlingEffect}</div> 
-</div>
-
             </div>
                 {authenticated && user ?
                     <div className="reviews-container">
