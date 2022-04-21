@@ -27,3 +27,12 @@ export const PurchasePart = async (part_id, part_stock, owner_id) => {
     throw error
   }
 }
+
+export const AssignPart = async (part_id, car_id) => {
+  try {
+    const res = await Client.put(`/parts/${part_id}`, {carId: car_id})
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
