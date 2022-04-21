@@ -19,7 +19,7 @@ const Garage = ({user}) => {
             const data = await GetAllCars()
             let selectedCar = []
             data.forEach((car) => {
-                if(car.ownerId === user.id) {
+                if(car.ownerId === user.id && car.status === false) {
                     selectedCar.push(car)
                 }
             }) 
@@ -32,8 +32,10 @@ const Garage = ({user}) => {
     const sellCarBtn = (carId) => {
         SellCar(carId)
         console.log(cars)
+        navigate('/')
     }
-    ///
+    
+    
  
 
     return(
