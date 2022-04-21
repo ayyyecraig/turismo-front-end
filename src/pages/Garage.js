@@ -1,6 +1,7 @@
 import React,{ useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GetAllCars } from '../services/CarServices'
+import { SellCar } from '../services/CarServices'
 
 
 const Garage = ({user}) => {
@@ -18,7 +19,7 @@ const Garage = ({user}) => {
             const data = await GetAllCars()
             let selectedCar = []
             data.forEach((car) => {
-                if(car.ownerId === user.id) {
+                if(car.ownerId === user.id && car.status === false) {
                     selectedCar.push(car)
                 }
             }) 
@@ -27,12 +28,21 @@ const Garage = ({user}) => {
         }
         handleCars()
     }, [cars.id])
+
+    const sellCarBtn = (carId) => {
+        SellCar(carId)
+        console.log(cars)
+        navigate('/')
+    }
+    
+    
  
 
     return(
         <div>
         {
             cars.map((car) => (
+
                 <div className="car-item"  onClick={() => showCar(car)} >
                     <img className="car-image" src={car.image} alt="car"  style={{display: 'block', maxWidth:'50%'}}/>
                     <div className="dets">
@@ -40,6 +50,7 @@ const Garage = ({user}) => {
                         <h2>{car.model}</h2>
                         <h3>Price: ${car.price}</h3>
                     </div>
+
                 </div>
             ))
         }

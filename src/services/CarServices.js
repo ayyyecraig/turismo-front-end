@@ -36,3 +36,12 @@ export const PurchaseCar = async (car_id, owner_id) => {
     throw error
   }
 }
+
+export const SellCar = async (car_id) => {
+  try {
+    const res = await Client.put(`/cars/${car_id}`, {status: true})
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
