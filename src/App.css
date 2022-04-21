@@ -611,11 +611,11 @@ fieldset{
  
   /* (A2) SEGMENTS */
   background: conic-gradient(
-    rgb(255 0 0) 0deg 80deg,
-    rgb(0 128 0) 80deg 196deg,
-    rgb(0 0 255) 190deg 315deg,
-    rgb(255 165 0) 288deg 313deg,
-    purple
+    rgb(255 0 0) 0deg 49deg,
+    rgb(0 128 0) 80deg 33deg,
+    rgb(0 0 255) 289deg 287deg,
+    rgb(255 165 0) 324deg 297deg,
+    rgb(128 0 128)
 
   );
 }
@@ -623,7 +623,7 @@ fieldset{
 .hole {
   width: 180px; height: 180px;
   border-radius: 50%;
-  background: #fff;
+  background: transparent
 }
  
 
