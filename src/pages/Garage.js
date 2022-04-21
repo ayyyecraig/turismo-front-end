@@ -33,6 +33,7 @@ const Garage = ({user}) => {
         SellCar(carId)
         console.log(cars)
     }
+    ///
  
 
     return(
