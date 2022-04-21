@@ -110,7 +110,8 @@ body{
   text-align: center;
   font-family: 'Rajdhani', sans-serif;
   font-size: 15px;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
  } 
 
  .car-item:hover{

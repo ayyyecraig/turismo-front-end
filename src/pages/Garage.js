@@ -42,12 +42,14 @@ const Garage = ({user}) => {
         <div>
         {
             cars.map((car) => (
-                <div className="car-item"   >
-                    <img onClick={() => showCar(car)} className="car-image" src={car.image} alt="car"  style={{display: 'block', maxWidth:'50%'}}/>
-                    <h1 className="dets">{car.make}</h1>
-                    <h2 className="dets">{car.model}</h2>
-                    <h3 className="dets">Price: ${car.price}</h3>
-                    <button onClick={() => {sellCarBtn(car.id)}}>SELL</button>
+
+                <div className="car-item"  onClick={() => showCar(car)} >
+                    <img className="car-image" src={car.image} alt="car"  style={{display: 'block', maxWidth:'50%'}}/>
+                    <div className="dets">
+                        <h1>{car.make}</h1>
+                        <h2>{car.model}</h2>
+                        <h3>Price: ${car.price}</h3>
+                    </div>
 
                 </div>
             ))
