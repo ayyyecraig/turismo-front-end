@@ -18,3 +18,12 @@ export const GetPartById = async (partId) => {
     throw error
   }
 }
+
+export const PurchasePart = async (car_id, owner_id) => {
+  try {
+    const res = await Client.put(`/cars/${car_id}`, {ownerId: owner_id, status: false})
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
