@@ -34,7 +34,8 @@ const Garage = ({user}) => {
         console.log(cars)
         navigate('/')
     }
-    ///
+    
+    
  
 
     return(
