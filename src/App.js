@@ -4,6 +4,7 @@ import Nav from './components/NavBar'
 import Home from './pages/Home'
 import Car from './pages/Car'
 import CarDetails from './pages/CarDetails'
+import CarMods from './pages/CarMods'
 import Garage from './pages/Garage'
 import Parts from './pages/Parts'
 import PartDetails from './pages/PartDetails'
@@ -73,7 +74,7 @@ export default function App() {
                       user={user} />}
                     />
                     <Route path="cars/view/:id" element={<CarDetails user={user} authenticated={authenticated} /> } />
-                    <Route path="garage/view/:id" element={<CarDetails user={user} authenticated={authenticated} /> } />
+                    <Route path="garage/view/:id" element={<CarMods user={user} authenticated={authenticated} /> } />
                 </Routes>
             </main>
         </div>
