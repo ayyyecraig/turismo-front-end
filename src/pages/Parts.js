@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
-import Reviews from '../components/Reviews'
 import { useState } from 'react'
 import { GetAllParts } from '../services/PartServices'
-import PartDetails from './PartDetails'
 import { useNavigate } from "react-router-dom"
 
 const Parts = () => {
@@ -20,11 +18,6 @@ const Parts = () => {
 
     let navigate = useNavigate();
 
-    const [displayReview, setDisplayReview] = useState(false)
-
-    const toggleReviews = () => {
-        setDisplayReview(!displayReview)
-    }
 
     const partDetails = (part) => {
         navigate(`/parts/${part.id}`)
