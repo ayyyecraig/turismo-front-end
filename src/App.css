@@ -104,40 +104,47 @@ body{
 }
 /* all cars page */
 
-
-.car-item {
+.cars{
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+  margin: 30px;
+  flex-wrap: wrap;
+  column-count: 2;
+  column-gap: 40px;
+  max-height: 900px;
+}
+.car-item{
+  display: flex;
+  flex-direction: column;
   font-size: 5px;
   text-align: center;
   font-family: 'Rajdhani', sans-serif;
   font-size: 15px;
-  justify-content: space-around;
-  align-items: center;
- } 
-
- .car-item:hover{
-  font-size: 20px;
-  transform: scale(0.9);
-  box-shadow: 0px 5px 0px -5px rgba(0,0,0,1);
-  background-color: transparent;
-
- }
-
-.dets{
-  font-size: smaller;
-  margin: 10px;
-  padding: .5em;
+  justify-content: space-evenly; 
   background: rgb(201 131 63 / 40%);
   border-radius: 8px;
   box-shadow: 0 10px 20px -10px rgba(0,0,1,1);
-  transition: all .5s ease;
+  transition: all .4s ease;
   cursor:pointer;
   overflow: hidden;
   position: relative;
-  left:-300px;
- 
+  margin: 10px;
+  width: 200px;
+  height: 400px;
 }
 
+.car-item:hover{
+font-size: 20px;
+transform: scale(0.9);
+box-shadow: 0px 5px 0px -5px rgba(0,0,0,1);
+
+}
+
+ .dets {
+  margin: auto 7px;
+}
 
 
 .car-image {
@@ -149,17 +156,24 @@ body{
   transition: all .5s ease;
   cursor:pointer;
   overflow: hidden;
-  max-height: 100px;
+  max-width: 80%
+}
+
+.car-image:hover {
+  margin: 10px;
+  padding: .5em;
+  background: rgb(201 131 63 / 40%);
+  border-radius: 8px;
+  box-shadow: 0 10px 20px -10px rgba(0,0,1,1);
+  transition: all .4s ease;
+  cursor:none;
+  overflow: hidden;
+  max-height: 200px;
+  max-width: 200px;
 
 }
 
 /* car details page */
-
-.car-image:hover{
-  transform: scale(2.8);
-  
-
-}
 
 .car-details{
   display: flex;
