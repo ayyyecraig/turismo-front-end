@@ -24,11 +24,11 @@ const Car = () => {
  
 
     return(
-        <div>
+        <div className="cars">
         {
             cars.map((car) => (
                 <div className="car-item"  onClick={() => showCar(car)} >
-                    <img className="car-image" src={car.image} alt="car"  style={{display: 'block', maxWidth:'50%'}}/>
+                    <img className="car-image" src={car.image} alt="car"  style={{display: 'block', maxWidth:'80%'}}/>
                     <div className="dets">
                         <h1>{car.make}</h1>
                         <h2>{car.model}</h2>
