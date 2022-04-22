@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-let apiUrl = process.env.NODE_ENV === 'production' ? 'https://git.heroku.com/duemila-ruote-backend.git' : 'http://localhost:3001'
+let apiUrl = process.env.NODE_ENV === 'production' ? 'https://duemila-ruote-backend.herokuapp.com/' : 'http://localhost:3001'
 
 const Client = Axios.create({ baseURL: apiUrl })
 console.log(apiUrl)
