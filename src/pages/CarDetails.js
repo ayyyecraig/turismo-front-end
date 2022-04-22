@@ -1,7 +1,6 @@
 import React,{ useEffect, useState } from 'react'
-import { GetAllCars, GetCarDetails } from '../services/CarServices'
+import { GetCarDetails } from '../services/CarServices'
 import { useParams } from 'react-router-dom';
-import UsersCars from '../components/UsersCars';
 import { PurchaseCar } from '../services/CarServices';
 import { useNavigate } from 'react-router-dom';
 

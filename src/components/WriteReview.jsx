@@ -17,21 +17,12 @@ const WriteReview = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         await NewReview(formValues.rating, formValues.content, props.user.id, props.part.id)
-        navigate(`/parts/${props.part.id}`)
+        navigate(`/parts`)
         setFormValues({...formValues, rating: '', content: ''})
     }
     return (
         <div className="write-review-form">
             <h3>Review this Product</h3>
-            {/* <input
-                className="review-input"
-                type="number"
-                name="rating"
-                value={formValues.rating}
-                placeholder="Your Rating"
-                onChange={handleChange}
-                required
-            /> */}
             <textarea
                 className="reviewBox"
                 type="text"

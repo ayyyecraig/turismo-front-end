@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { GetAllParts, AssignPart } from '../services/PartServices'
 
 
-const CarMods = ({user, authenticated}) => {
+const CarMods = ({ user }) => {
 
     let navigate = useNavigate()
 

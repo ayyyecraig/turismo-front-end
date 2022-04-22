@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Navigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
 import { GetReviews } from '../services/ReviewServices';
-import { useNavigate } from 'react-router-dom';
 
 const Reviews = ({ user }) => {
 

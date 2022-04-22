@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { GetReviewById, UpdateReview, DeleteReview } from '../services/ReviewServices';
 
-const ReviewDetails = ({ user, authenticated }) => {
+const ReviewDetails = ({ user }) => {
 
 
     const [ formValues, setFormValues ] = useState({

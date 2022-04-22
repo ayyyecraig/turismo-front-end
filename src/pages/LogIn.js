@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { SignInUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
 const LogIn = (props) => {
-
-    // const [email, setEmail] = useState('')
-    // useEffect(() => {console.log(email)}, [email])
-
-    // const [password, setPassword] = useState('')
-    // useEffect(() => {console.log(password)}, [password])
 
     let navigate = useNavigate()
   

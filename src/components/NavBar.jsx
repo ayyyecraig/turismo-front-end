@@ -11,7 +11,6 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
                 <Link to="/garage" className='links'>Garage</Link>
                 <Link to="/cars" className='links'>Car Lot</Link>
                 <Link to="/parts" className='links'>Specs and Mods</Link>
-                {/* <h3>Hello, {user.email}</h3> */}
            
               <Link onClick={handleLogOut} to="/" className='logout'>
                     Log Out
