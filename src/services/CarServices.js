@@ -2,7 +2,6 @@ import Client from './api'
 
 export const GetAllCars = async () => {
   try {
-    res.header("Access-Control-Allow-Origin", "*");
     const res = await Client.get('/cars/view')
     return res.data
   } catch (error) {
