@@ -38,7 +38,7 @@ export default function App() {
   
     useEffect(() =>{
       const token = localStorage.getItem('token')
-  
+      console.log(process.env.NODE_ENV)
       if (token) {
         checkToken()
       }
