@@ -37,6 +37,9 @@ Sam and Dylan hitting the back end starting strong with migrations, databases, a
 - View Cars
 - View/ add parts to sup up vehicles
 
+![Imgur](https://i.imgur.com/Ld9J2gc.png)
+
+![Imgur](https://i.imgur.com/W2q8SnO.png)
 
 ### Technologies 
 * React 
@@ -48,6 +51,10 @@ Sam and Dylan hitting the back end starting strong with migrations, databases, a
 * Express
 * JWT AUTH
 
+
+## Heroku Deployment
+
+[Duemilla](https://ancient-atoll-31198.herokuapp.com/)
 
 ### ERD, Trellos, Vision
 
